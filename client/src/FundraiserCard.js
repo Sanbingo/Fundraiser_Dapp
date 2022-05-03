@@ -55,6 +55,7 @@ const useStyles = makeStyles (theme => ({
 }));
 
 const FundraiserCard = ({fundraiser}) => {
+    console.log('fundraiser: ', fundraiser)
     const classes = useStyles();
     const [ web3, setWeb3 ] = useState(null);
     const [ url, setURL ] = useState(null);

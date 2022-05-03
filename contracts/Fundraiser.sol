@@ -5,7 +5,7 @@ import "openzeppelin-solidity/contracts/utils/math/SafeMath.sol";
 
 
 contract Fundraiser is Ownable {
-    using SafeMath for uint256;
+    using SafeMath for uint256; // 引入safemath库，uint256类型的变量都可以用safemath提供的方法
     string public name;
     string public url;
     string public imageURL;
