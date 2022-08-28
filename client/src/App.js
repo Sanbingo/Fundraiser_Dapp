@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import NewFundraiser from "./NewFundraiser";
-import Home from "./Home";
-import Receipts from "./Receipts";
+import { Link } from "react-router-dom";
 import FactoryContract from "./contracts/FundraiserFactory.json";
 import getWeb3 from "./getWeb3";
 import "./App.css";
@@ -24,7 +21,6 @@ const App = () => {
     accounts: null,
     contract: null,
   });
-  const [storageValue, setStorageValue] = useState(0);
 
   useEffect(() => {
     const init = async () => {
@@ -49,9 +45,6 @@ const App = () => {
     init();
   }, []);
 
-  const runExample = async () => {
-    const { accounts, contract } = state;
-  };
 
   return (
     <div className={classes.root}>
@@ -61,8 +54,9 @@ const App = () => {
               <Link className={classes.navLink} to="/home">
                 Home
               </Link>
+              |
               <Link className={classes.navLink} to="/new">
-                New2
+                New
               </Link>
             </Typography>
           </Toolbar>
